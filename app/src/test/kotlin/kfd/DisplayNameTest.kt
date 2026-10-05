@@ -13,4 +13,19 @@ class DisplayNameTest {
     fun handlesNull() {
         assertEquals("Гость", displayName(null))
     }
+
+    @Test
+    fun spacesStartEnd() {
+        assertEquals("Анна", displayName(" Анна "))
+    }
+
+    @Test
+    fun emptyString() {
+        assertEquals("Гость", displayName(""))
+    }
+
+    @Test
+    fun spaceString() {
+        assertEquals("Гость", displayName(" "))
+    }
 }
